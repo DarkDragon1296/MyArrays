@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "Menu.h"
+#include "StandArr.h"
+#include "OtherOperations.h"
 
 Modes ChooseMode(void)
 {
@@ -23,7 +25,7 @@ Modes ChooseMode(void)
         }
 
         if (choose_mode == NONE)
-            printf("Try again!!!");
+            printf("Try again!!!\n");
     }
 
     return choose_mode;
@@ -39,12 +41,12 @@ void ShowMenu(void)
     return;
 }
 
-void ClearInput(void)
+void StartMode(Modes mode)
 {
-    char ch = 0;
-
-    while (ch != '\n' && ch != EOF)
-        ch = getchar();
-
-    return;
+    switch (mode)
+    {
+        case STAND_ARR:
+            RunStandArr();
+            break;
+    }
 }

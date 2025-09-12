@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "Menu.h"
-#include "StandArr.h"
 
 int main(void)
 {
@@ -10,8 +9,9 @@ int main(void)
 
     while (mode != EXIT)
     {
-        ChooseMode();
+        mode = ChooseMode();
 
+        StartMode(mode);
     }
 
 
