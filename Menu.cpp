@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "Menu.h"
 #include "StandArr.h"
+#include "TorusArr.h"
 #include "OtherOperations.h"
 
 Modes ChooseMode(void)
@@ -20,6 +21,9 @@ Modes ChooseMode(void)
                 choose_mode = STAND_ARR;
                 break;
             case 2:
+                choose_mode = TORUS_ARR;
+                break;
+            case 3:
                 choose_mode = EXIT;
                 break;
         }
@@ -36,7 +40,8 @@ void ShowMenu(void)
     printf("Select the array you are interested in:\n");
     printf("Modes:\n");
     printf("1) Standart\n");
-    printf("2) Exit\n");
+    printf("2) Torus\n");
+    printf("3) Exit\n");
 
     return;
 }
@@ -47,6 +52,9 @@ void StartMode(Modes mode)
     {
         case STAND_ARR:
             RunStandArr();
+            break;
+        case TORUS_ARR:
+            RunTorusArr();
             break;
     }
 }

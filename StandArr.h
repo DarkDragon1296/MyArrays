@@ -8,4 +8,10 @@ void RunStandArr(void);
 
 void StandArrFill(int arr[][STAND_ARR_SIZE_X], int size_y, int size_x);
 
+void StandArrShow(const int arr[][STAND_ARR_SIZE_X], int size_y, int size_x);
+
+int StandArrMin(const int arr[][STAND_ARR_SIZE_X], int size_y, int size_x);
+
+int StandArrMax(const int arr[][STAND_ARR_SIZE_X], int size_y, int size_x);
+
 #endif

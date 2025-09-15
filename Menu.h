@@ -3,6 +3,7 @@
 
 enum Modes  {
                 NONE,
+                TORUS_ARR,
                 EXIT,
                 STAND_ARR
             };
